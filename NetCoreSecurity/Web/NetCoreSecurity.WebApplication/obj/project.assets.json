@@ -7155,11 +7155,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MG\\Projects\\NetCoreSecurity\\Web\\NetCoreSecurity.WebApplication\\NetCoreSecurity.WebApplication.csproj",
+      "projectUniqueName": "C:\\MG\\Projects\\git\\NetCoreSecurity\\Web\\NetCoreSecurity.WebApplication\\NetCoreSecurity.WebApplication.csproj",
       "projectName": "NetCoreSecurity.WebApplication",
-      "projectPath": "C:\\MG\\Projects\\NetCoreSecurity\\Web\\NetCoreSecurity.WebApplication\\NetCoreSecurity.WebApplication.csproj",
+      "projectPath": "C:\\MG\\Projects\\git\\NetCoreSecurity\\Web\\NetCoreSecurity.WebApplication\\NetCoreSecurity.WebApplication.csproj",
       "packagesPath": "C:\\Users\\mgirit\\.nuget\\packages\\",
-      "outputPath": "C:\\MG\\Projects\\NetCoreSecurity\\Web\\NetCoreSecurity.WebApplication\\obj\\",
+      "outputPath": "C:\\MG\\Projects\\git\\NetCoreSecurity\\Web\\NetCoreSecurity.WebApplication\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\mgirit\\AppData\\Roaming\\NuGet\\NuGet.Config",
