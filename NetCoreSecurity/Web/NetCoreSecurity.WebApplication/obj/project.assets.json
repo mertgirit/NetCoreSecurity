@@ -2010,6 +2010,16 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "AppSettings/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/AppSettings.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AppSettings.dll": {}
+        }
       }
     }
   },
@@ -7138,10 +7148,16 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "AppSettings/1.0.0": {
+      "type": "project",
+      "path": "../../AppSettings/AppSettings.csproj",
+      "msbuildProject": "../../AppSettings/AppSettings.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
+      "AppSettings >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 5.0.10",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.10",
       "Microsoft.EntityFrameworkCore.SqlServer >= 5.0.9",
@@ -7176,7 +7192,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\MG\\Projects\\git\\NetCoreSecurity\\AppSettings\\AppSettings.csproj": {
+              "projectPath": "C:\\MG\\Projects\\git\\NetCoreSecurity\\AppSettings\\AppSettings.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
