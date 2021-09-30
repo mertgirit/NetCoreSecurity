@@ -1,5 +1,4 @@
 ﻿using System.Net;
-using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Options;
@@ -7,6 +6,7 @@ using Microsoft.Extensions.Options;
 namespace NetCoreSecurity.WebApplication.Middleware
 {
     using AppSettings;
+    using NetCoreSecurity.WebApplication.Helpers;
 
     public class IPSecurityMiddleware
     {
@@ -15,14 +15,14 @@ namespace NetCoreSecurity.WebApplication.Middleware
 
         public IPSecurityMiddleware(RequestDelegate next, IOptions<IPList> ipWhiteList)
         {
-            this._next = next;
-            this._ipWhiteList = ipWhiteList.Value;
+            _next = next;
+            _ipWhiteList = ipWhiteList.Value;
         }
 
         public async Task Invoke(HttpContext httpContext)
         {
             var requestIpAddress = httpContext.Connection.RemoteIpAddress;
-            var isWhiteList = _ipWhiteList.WhiteList.Where(x => IPAddress.Parse(x).Equals(requestIpAddress)).Any();
+            var isWhiteList = Helper.CheckWhiteListIP(requestIpAddress.ToString(), _ipWhiteList.WhiteList);
             if (!isWhiteList)
             {
                 httpContext.Response.StatusCode = (int)HttpStatusCode.Forbidden;

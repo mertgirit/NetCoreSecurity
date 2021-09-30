@@ -10,6 +10,7 @@ using NetCoreSecurity.WebApplication.Middleware;
 namespace NetCoreSecurity.WebApplication
 {
     using AppSettings;
+    using NetCoreSecurity.WebApplication.Filters;
 
     public class Startup
     {
@@ -29,6 +30,8 @@ namespace NetCoreSecurity.WebApplication
 
             //DataProtection servislerinin containera eklenmesini saðlar.
             services.AddDataProtection();
+
+            services.AddScoped<CheckWhiteList>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -44,6 +47,7 @@ namespace NetCoreSecurity.WebApplication
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+            app.UseMiddleware<IPSecurityMiddleware>();
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -51,7 +55,7 @@ namespace NetCoreSecurity.WebApplication
 
             app.UseAuthorization();
 
-            app.UseMiddleware<IPSecurityMiddleware>();
+            
 
             app.UseEndpoints(endpoints =>
             {

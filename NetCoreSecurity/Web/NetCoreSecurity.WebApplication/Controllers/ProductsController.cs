@@ -8,6 +8,7 @@ namespace NetCoreSecurity.WebApplication.Controllers
     using Microsoft.AspNetCore.DataProtection;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using NetCoreSecurity.WebApplication.Models;
+    using NetCoreSecurity.WebApplication.Filters;
 
     public class ProductsController : Controller
     {
@@ -30,6 +31,7 @@ namespace NetCoreSecurity.WebApplication.Controllers
             return View(await products.ToListAsync());
         }
 
+        [ServiceFilter(typeof(CheckWhiteList))]
         // GET: Products/Details/5
         public async Task<IActionResult> Details(string id)
         {
