@@ -9,3 +9,4 @@ C:\MG\Projects\git\NetCoreSecurity\AppSettings\obj\Debug\net5.0\AppSettings.cspr
 C:\MG\Projects\git\NetCoreSecurity\AppSettings\obj\Debug\net5.0\AppSettings.dll
 C:\MG\Projects\git\NetCoreSecurity\AppSettings\obj\Debug\net5.0\ref\AppSettings.dll
 C:\MG\Projects\git\NetCoreSecurity\AppSettings\obj\Debug\net5.0\AppSettings.pdb
+C:\MG\Projects\git\NetCoreSecurity\AppSettings\obj\Debug\net5.0\AppSettings.csproj.AssemblyReference.cache

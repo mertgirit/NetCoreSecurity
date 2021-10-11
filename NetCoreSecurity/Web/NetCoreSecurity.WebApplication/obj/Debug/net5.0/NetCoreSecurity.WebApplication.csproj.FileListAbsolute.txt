@@ -301,3 +301,8 @@ C:\MG\Projects\git\NetCoreSecurity\Web\NetCoreSecurity.WebApplication\obj\Debug\
 C:\MG\Projects\git\NetCoreSecurity\Web\NetCoreSecurity.WebApplication\obj\Debug\net5.0\ref\NetCoreSecurity.WebApplication.dll
 C:\MG\Projects\git\NetCoreSecurity\Web\NetCoreSecurity.WebApplication\obj\Debug\net5.0\NetCoreSecurity.WebApplication.pdb
 C:\MG\Projects\git\NetCoreSecurity\Web\NetCoreSecurity.WebApplication\obj\Debug\net5.0\NetCoreSecurity.WebApplication.genruntimeconfig.cache
+C:\MG\Projects\git\NetCoreSecurity\Web\NetCoreSecurity.WebApplication\obj\Debug\net5.0\Razor\Views\Customer\Create.cshtml.g.cs
+C:\MG\Projects\git\NetCoreSecurity\Web\NetCoreSecurity.WebApplication\obj\Debug\net5.0\Razor\Views\Customer\Delete.cshtml.g.cs
+C:\MG\Projects\git\NetCoreSecurity\Web\NetCoreSecurity.WebApplication\obj\Debug\net5.0\Razor\Views\Customer\Details.cshtml.g.cs
+C:\MG\Projects\git\NetCoreSecurity\Web\NetCoreSecurity.WebApplication\obj\Debug\net5.0\Razor\Views\Customer\Edit.cshtml.g.cs
+C:\MG\Projects\git\NetCoreSecurity\Web\NetCoreSecurity.WebApplication\obj\Debug\net5.0\Razor\Views\Customer\Index.cshtml.g.cs

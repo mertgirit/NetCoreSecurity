@@ -8,7 +8,7 @@ namespace NetCoreSecurity.WebApplication.Helpers
     {
         public static bool CheckWhiteListIP(string requestIp, List<string> validIPs)
         {
-            return validIPs.Where(x => IPAddress.Parse(x).Equals(requestIp)).Any();
+            return validIPs.Where(x => IPAddress.Parse(x).ToString().Equals(requestIp)).Any();
         }
     }
 }
