@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppSettings", "AppSettings\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetCoreSecurity.WebApplication", "Web\NetCoreSecurity.WebApplication\NetCoreSecurity.WebApplication.csproj", "{E0E2014C-A299-431D-AD65-B1D38522B43F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetCoreSecurity.WebAPI", "Web\NetCoreSecurity.WebAPI\NetCoreSecurity.WebAPI.csproj", "{3B2687B1-7E90-442D-9338-2A70B6DF9D4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E0E2014C-A299-431D-AD65-B1D38522B43F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0E2014C-A299-431D-AD65-B1D38522B43F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0E2014C-A299-431D-AD65-B1D38522B43F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B2687B1-7E90-442D-9338-2A70B6DF9D4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B2687B1-7E90-442D-9338-2A70B6DF9D4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B2687B1-7E90-442D-9338-2A70B6DF9D4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B2687B1-7E90-442D-9338-2A70B6DF9D4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
