@@ -1,21 +1,16 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
+using Microsoft.Net.Http.Headers;
 using Microsoft.OpenApi.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace NetCoreSecurity.WebAPI
 {
     public class Startup
     {
+        private const string CORS_POLICY_WITH_ORIGIN = "AllowWithOrigins";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -28,19 +23,12 @@ namespace NetCoreSecurity.WebAPI
         {
             services.AddCors(options =>
             {
-                //options.AddDefaultPolicy(builder =>
-                //{
-                //    builder.AllowAnyOrigin(); // istek nereden gelirse gelsin izin ver.
-                //    builder.AllowAnyHeader(); // headerda ne gelirse gelsin izin ver.
-                //    builder.AllowAnyMethod(); // hangi metod (GET,POST,PUT,DELETE vb) gelirse gelsin izin ver.
-                //});
-                options.AddPolicy("AllowAll", builder =>
+                options.AddPolicy(CORS_POLICY_WITH_ORIGIN, builder =>
                 {
-                    builder.WithOrigins("https://localhost:44349").AllowAnyHeader().AllowAnyMethod();
-                });
-                options.AddPolicy("AllowSomeMethod", builder =>
-                {
-                    builder.WithMethods("GET");
+                    builder.
+                    WithOrigins("https://localhost:44349")
+                    .WithMethods("POST", "OPTIONS")
+                    .Build();
                 });
             });
             services.AddControllers();
@@ -65,7 +53,6 @@ namespace NetCoreSecurity.WebAPI
             app.UseRouting();
 
             //CorsMiddleware
-            //app.UseCors("AllowAll"); //belli bir policy kullanma.
             app.UseCors();
             //CorsMiddleware
 

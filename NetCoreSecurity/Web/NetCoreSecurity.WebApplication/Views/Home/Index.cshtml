@@ -6,3 +6,27 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+        @*fetch("https://localhost:44327/WeatherForecast", {
+            method: 'POST'
+        }).then(data => {
+            console.log(data);
+        });*@
+
+        //$.ajax({
+        //    url: "https://localhost:44327/WeatherForecast",
+        //    type: "get",
+        //    method: "get",
+        //    data: { },
+        //        success: function (response) {
+        //        }
+        //    });
+    $.ajax({
+        type: 'GET',
+        url: 'https://localhost:44327/WeatherForecast'
+    });
+</script>

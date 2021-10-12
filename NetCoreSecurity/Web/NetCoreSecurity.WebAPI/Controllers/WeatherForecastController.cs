@@ -7,6 +7,7 @@ using System.Linq;
 
 namespace NetCoreSecurity.WebAPI.Controllers
 {
+    
     [ApiController]
     [Route("[controller]")]
     public class WeatherForecastController : ControllerBase
@@ -23,7 +24,7 @@ namespace NetCoreSecurity.WebAPI.Controllers
             _logger = logger;
         }
 
-        [EnableCors("AllowSomeMethod")]
+        [EnableCors(PolicyName = "AllowWithOrigins")]
         [HttpGet]
         public IEnumerable<WeatherForecast> Get()
         {
@@ -37,7 +38,7 @@ namespace NetCoreSecurity.WebAPI.Controllers
             .ToArray();
         }
 
-        [EnableCors("AllowSomeMethod")]
+        [EnableCors(PolicyName = "AllowWithOrigins")]
         [HttpPost]
         public IEnumerable<WeatherForecast> Post()
         {
