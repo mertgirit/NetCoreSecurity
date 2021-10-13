@@ -11,22 +11,18 @@
 
 <script type="text/javascript">
 
-        @*fetch("https://localhost:44327/WeatherForecast", {
+        @*fetch("https://localhost:44301/WeatherForecast", {
             method: 'POST'
         }).then(data => {
             console.log(data);
         });*@
 
-        //$.ajax({
-        //    url: "https://localhost:44327/WeatherForecast",
-        //    type: "get",
-        //    method: "get",
-        //    data: { },
-        //        success: function (response) {
-        //        }
-        //    });
-    $.ajax({
-        type: 'GET',
-        url: 'https://localhost:44327/WeatherForecast'
-    });
+        $.ajax({
+            url: "https://localhost:44301/WeatherForecast",
+            type: "get",
+            method: "get",
+            data: { },
+                success: function (response) {
+                }
+            });
 </script>
