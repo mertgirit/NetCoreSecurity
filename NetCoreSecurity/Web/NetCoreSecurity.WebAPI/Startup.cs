@@ -27,7 +27,7 @@ namespace NetCoreSecurity.WebAPI
                 {
                     builder.
                     WithOrigins("https://localhost:44349")
-                    .WithMethods("GET", "POST", "OPTIONS")
+                    .WithMethods("GET", "OPTIONS")
                     .Build();
                 });
             });

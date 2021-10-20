@@ -31,7 +31,7 @@ namespace NetCoreSecurity.WebApplication.Controllers
             return View(await products.ToListAsync());
         }
 
-        [ServiceFilter(typeof(CheckWhiteList))]
+        [ServiceFilter(typeof(CheckWhiteListAttribute))]
         // GET: Products/Details/5
         public async Task<IActionResult> Details(string id)
         {
