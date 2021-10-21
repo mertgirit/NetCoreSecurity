@@ -9,16 +9,21 @@ namespace NetCoreSecurity.WebApplication.Controllers
     using Microsoft.AspNetCore.Mvc.Rendering;
     using NetCoreSecurity.WebApplication.Models;
     using NetCoreSecurity.WebApplication.Filters;
+    using System;
 
     public class ProductsController : Controller
     {
         private readonly NorthwindContext _context;
         private readonly IDataProtector _dataProtector;
+        private readonly ITimeLimitedDataProtector _timeLimitedDataProtector;
 
         public ProductsController(NorthwindContext context, IDataProtectionProvider dataProtectionProvider)
         {
             _context = context;
             _dataProtector = dataProtectionProvider.CreateProtector("CryptoKeyForProductsController");
+
+            _timeLimitedDataProtector = _dataProtector.ToTimeLimitedDataProtector();
+
         }
 
         // GET: Products
@@ -27,6 +32,8 @@ namespace NetCoreSecurity.WebApplication.Controllers
             var products = _context.Products.Include(p => p.Category).Include(p => p.Supplier);
 
             await products.ForEachAsync(x => x.EncryptedId = _dataProtector.Protect(x.ProductId.ToString()));
+
+            //await products.ForEachAsync(x => x.EncryptedId = _timeLimitedDataProtector.Protect(x.ProductId.ToString(), TimeSpan.FromMinutes(5)));
 
             return View(await products.ToListAsync());
         }
